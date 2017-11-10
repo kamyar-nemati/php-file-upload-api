@@ -45,8 +45,10 @@ class TermUpload extends Restserver\Libraries\REST_Controller {
         
         $this->load->model('UploadTerminationModel');
         
-        return $this->Json(
-                $this->UploadTerminationModel->terminate($sess_key, $file_meta, $file_md5));
+	$obj_term = $this->UploadTerminationModel
+		->terminate($sess_key, $file_meta, $file_md5);
+
+        return $this->Json($obj_term);
     }
     
     private function Json(&$obj) {

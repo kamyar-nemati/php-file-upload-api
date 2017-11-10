@@ -57,8 +57,10 @@ class ContUpload extends Restserver\Libraries\REST_Controller {
         
         $this->load->model('UploadContinuationModel');
         
-        return $this->Json(
-                $this->UploadContinuationModel->upload($sess_key, $file_offset, $chunk_md5));
+	$obj_cont = $this->UploadContinuationModel
+		->upload($sess_key, $file_offset, $chunk_md5);
+
+        return $this->Json($obj_cont);
     }
     
     private function Json(&$obj) {

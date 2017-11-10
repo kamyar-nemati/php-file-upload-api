@@ -37,8 +37,10 @@ class InitUpload extends Restserver\Libraries\REST_Controller {
         
         $this->load->model('UploadInitializationModel');
         
-        return $this->Json(
-                $this->UploadInitializationModel->initialize($file_name, $byte_size));
+	$obj_init = $this->UploadInitializationModel
+		->initialize($file_name, $byte_size);
+
+        return $this->Json($obj_init);
     }
     
     private function Json(&$obj) {
