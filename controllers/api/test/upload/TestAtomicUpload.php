@@ -170,28 +170,28 @@
                         var _file_md5 = $('#file_md5').val();
                         
                         if (_file_name !== '')
-                            xhr.setRequestHeader('file_name', _file_name);
+                            xhr.setRequestHeader('file-name', _file_name);
                         
                         if (_byte_size !== '')
-                            xhr.setRequestHeader('byte_size', _byte_size);
+                            xhr.setRequestHeader('byte-size', _byte_size);
                     
                         if (_file_offset !== '')
-                            xhr.setRequestHeader('file_offset', _file_offset);
+                            xhr.setRequestHeader('file-offset', _file_offset);
                     
                         if (_chunk_md5 !== '')
-                            xhr.setRequestHeader('chunk_md5', _chunk_md5);
+                            xhr.setRequestHeader('chunk-md5', _chunk_md5);
                     
                         if (_sess_key !== '')
-                            xhr.setRequestHeader('sess_key', _sess_key);
+                            xhr.setRequestHeader('sess-key', _sess_key);
                     
                         if (_msg_type !== '')
-                            xhr.setRequestHeader('msg_type', _msg_type);
+                            xhr.setRequestHeader('msg-type', _msg_type);
                     
                         if (_file_meta !== '')
-                            xhr.setRequestHeader('file_meta', _file_meta);
+                            xhr.setRequestHeader('file-meta', _file_meta);
                     
                         if (_file_md5 !== '')
-                            xhr.setRequestHeader('file_md5', _file_md5);
+                            xhr.setRequestHeader('file-md5', _file_md5);
                         
                     },
                     success: function (data, textStatus, jqXHR) {
